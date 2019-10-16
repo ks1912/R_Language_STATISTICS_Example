@@ -1,0 +1,32 @@
+set.seed(1)
+#Generate random number and store it in a variable called data
+data = runif(20,1,10)
+data
+
+#Calculate Mean
+mean = mean(data)
+print(mean)
+
+#Calculate median
+median = median(data)
+print(median)
+
+#Calculate a function for calculating Mode
+mode <- function(x){
+ux <- unique(x)
+ux[which.max(tabulate(match(x, ux)))]
+}
+result <- mode(data)
+print(data)
+cat("mode= {}", result)
+
+# Calculating Variance and std Deviation
+variance = var(data)
+print(variance)
+standard_Deviation = sqrt(variance)
+standardDeviation = sqrt(var(data))
+print(standard_Deviation)
+print(standardDeviation)
+
+#Plot Histogram
+hist(data, beans=10, range= c(0,10), edgecolor='black')
